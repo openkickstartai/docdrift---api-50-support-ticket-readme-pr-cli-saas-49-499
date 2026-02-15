@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "docdrift"
+version = "0.1.0"
+description = "Documentation-code sync drift detection engine"
+requires-python = ">=3.9"
+license = {text = "AGPL-3.0"}
+keywords = ["documentation", "drift", "linting", "ci", "docs-as-code"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Quality Assurance",
+    "Programming Language :: Python :: 3",
+]
+
+[project.scripts]
+docdrift = "docdrift:main"
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
